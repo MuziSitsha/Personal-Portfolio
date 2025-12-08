@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="g2" x1="0" x2="1">
+      <stop offset="0%" stop-color="#001021"/>
+      <stop offset="100%" stop-color="#003d5b"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#g2)"/>
+  <g stroke="#8be7ff" stroke-width="4" fill="none" stroke-linecap="round">
+    <rect x="150" y="120" width="180" height="120" rx="12"/>
+    <rect x="370" y="220" width="240" height="140" rx="10"/>
+    <rect x="640" y="100" width="360" height="220" rx="14"/>
+  </g>
+  <g fill="#8be7ff">
+    <circle cx="300" cy="600" r="10"/>
+    <circle cx="540" cy="640" r="10"/>
+    <circle cx="840" cy="580" r="10"/>
+  </g>
+  <text x="60" y="720" fill="#bff6ff" font-family="Arial, Helvetica, sans-serif" font-size="26">Cloud • APIs • Pipelines</text>
+</svg>
