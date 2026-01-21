@@ -86,9 +86,57 @@
             transform: translateY(-2px);
         }
 
-        /* Additional project link spacing */
-        .folio-item__project-link + .folio-item__project-link {
-            margin-left: 1rem;
+        /* Project buttons container */
+        .project-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        /* Project button styling */
+        .project-button {
+            display: inline-block;
+            font-family: "Gothic A1", sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            color: #000000;
+            background-color: #ffffff;
+            border: 0.2rem solid #ffffff;
+            padding: 0.8rem 1.6rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            min-width: 120px;
+            text-align: center;
+        }
+
+        .project-button:hover {
+            background-color: #f9861a;
+            border-color: #f9861a;
+            color: #ffffff;
+        }
+
+        .project-button.github {
+            background-color: #333;
+            border-color: #333;
+            color: #ffffff;
+        }
+
+        .project-button.github:hover {
+            background-color: #f9861a;
+            border-color: #f9861a;
+        }
+
+        .project-button.live-demo {
+            background-color: #4CAF50;
+            border-color: #4CAF50;
+            color: #ffffff;
+        }
+
+        .project-button.live-demo:hover {
+            background-color: #388E3C;
+            border-color: #388E3C;
         }
 
         /* Blue About Me section */
@@ -132,6 +180,15 @@
             .hero-subtitle {
                 font-size: 1.2rem;
             }
+            
+            .project-buttons {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .project-button {
+                width: 100%;
+            }
         }
 
         @media screen and (max-width: 600px) {
@@ -141,12 +198,6 @@
             
             .hero-subtitle {
                 font-size: 1rem;
-            }
-            
-            .folio-item__project-link + .folio-item__project-link {
-                display: block;
-                margin-left: 0;
-                margin-top: 0.5rem;
             }
         }
     </style>
@@ -398,6 +449,55 @@
 
         <div class="row s-porfolio__list block-large-1-2 block-tab-full collapse">
 
+            <!-- AI Health Predictor (SWAPPED to position 1) -->
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" href="images/tech/tech-ai-3.svg" Title="AI Health Predictor" data-size="1050x700">
+                            <img src="images/tech/tech-ai-3.svg" 
+                                 srcset="images/tech/tech-ai-3.svg 1x" alt="AI Health Predictor">
+                        </a>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat">AI Health Predictor</div>
+                        <h4 class="folio-item__title">Machine Learning Web Application</h4>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://github.com/MuziSitsha/ai-health-predictor" title="View Code" class="project-button github" target="_blank">GitHub</a>
+                        <a href="https://ai-health-predictor-kaknzejwgvtneyqpxzsm5b.streamlit.app/" title="Live Demo" class="project-button live-demo" target="_blank">Live Demo</a>
+                    </div>
+                    <div class="folio-item__caption">
+                        <p>A machine learning web application that predicts potential health risks using patient data. Built with Random Forest Classifier, Scikit-learn, and deployed with Streamlit.</p>
+                        <p><strong>Technologies:</strong> Python, Scikit-learn, Streamlit, Pandas, NumPy, Matplotlib</p>
+                    </div>
+                </div>
+            </div> <!-- end column -->
+
+            <!-- Cerat Engineering Website (SWAPPED to position 2) -->
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" href="images/tech/tech-ai-1.svg" title="Cerat Engineering Website" data-size="1050x700">
+                            <img src="images/tech/tech-ai-1.svg" 
+                                 srcset="images/tech/tech-ai-1.svg 1x" alt="Cerat Engineering Website">
+                        </a>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat">Cerat Engineering Website</div>
+                        <h4 class="folio-item__title">Modern Engineering Company Website</h4>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://github.com/MuziSitsha/cerat-engineering-website" title="View Code" class="project-button github" target="_blank">GitHub</a>
+                        <a href="https://cerat-engineering-website-u7op.vercel.app/" title="Live Website" class="project-button live-demo" target="_blank">Live Website</a>
+                    </div>
+                    <div class="folio-item__caption">
+                        <p>A modern, responsive website for an engineering company built with Next.js, TypeScript, and Tailwind CSS. Features include gallery, services, and contact forms.</p>
+                        <p><strong>Technologies:</strong> Next.js, TypeScript, Tailwind CSS, Vercel</p>
+                    </div>
+                </div>
+            </div> <!-- end column -->
+
+            <!-- AI Assistant (now position 3) -->
             <div class="column" data-aos="fade-up">
                 <div class="folio-item">
                     <div class="folio-item__thumb">
@@ -417,6 +517,7 @@
                 </div>
             </div> <!-- end column -->
 
+            <!-- AWS Cloud Infrastructure (now position 4) -->
             <div class="column" data-aos="fade-up">
                 <div class="folio-item">
                     <div class="folio-item__thumb">
@@ -432,48 +533,6 @@
                     <a href="http://3.234.23.127" title="Live Server" class="folio-item__project-link" target="_blank">Live Server</a>
                     <div class="folio-item__caption">
                         <p>Deployed EC2 instances, VPC, security groups, and application deployment for high-availability data applications. Tech: AWS EC2, VPC, Nginx, IAM.</p>
-                    </div>
-                </div>
-            </div> <!-- end column -->
-
-            <div class="column" data-aos="fade-up">
-                <div class="folio-item">
-                    <div class="folio-item__thumb">
-                        <a class="folio-item__thumb-link" href="images/tech/tech-ai-1.svg" title="Cerat Engineering Website" data-size="1050x700">
-                            <img src="images/tech/tech-ai-1.svg" 
-                                 srcset="images/tech/tech-ai-1.svg 1x" alt="Cerat Engineering Website">
-                        </a>
-                    </div>
-                    <div class="folio-item__info">
-                        <div class="folio-item__cat">Cerat Engineering Website</div>
-                        <h4 class="folio-item__title">Modern Engineering Company Website</h4>
-                    </div>
-                    <a href="https://cerat-engineering-website-u7op.vercel.app/" title="Live Website" class="folio-item__project-link" target="_blank">Live Website</a>
-                    <a href="https://github.com/MuziSitsha/cerat-engineering-website" title="View Code" class="folio-item__project-link" target="_blank">GitHub</a>
-                    <div class="folio-item__caption">
-                        <p>A modern, responsive website for an engineering company built with Next.js, TypeScript, and Tailwind CSS. Features include gallery, services, and contact forms.</p>
-                        <p><strong>Technologies:</strong> Next.js, TypeScript, Tailwind CSS, Vercel</p>
-                    </div>
-                </div>
-            </div> <!-- end column -->
-
-            <div class="column" data-aos="fade-up">
-                <div class="folio-item">
-                    <div class="folio-item__thumb">
-                        <a class="folio-item__thumb-link" href="images/tech/tech-ai-3.svg" Title="AI Health Predictor" data-size="1050x700">
-                            <img src="images/tech/tech-ai-3.svg" 
-                                 srcset="images/tech/tech-ai-3.svg 1x" alt="AI Health Predictor">
-                        </a>
-                    </div>
-                    <div class="folio-item__info">
-                        <div class="folio-item__cat">AI Health Predictor</div>
-                        <h4 class="folio-item__title">Machine Learning Web Application</h4>
-                    </div>
-                    <a href="https://ai-health-predictor-kaknzejwgvtneyqpxzsm5b.streamlit.app/" title="Live Demo" class="folio-item__project-link" target="_blank">Live Demo</a>
-                    <a href="https://github.com/MuziSitsha/ai-health-predictor" title="View Code" class="folio-item__project-link" target="_blank">GitHub</a>
-                    <div class="folio-item__caption">
-                        <p>A machine learning web application that predicts potential health risks using patient data. Built with Random Forest Classifier, Scikit-learn, and deployed with Streamlit.</p>
-                        <p><strong>Technologies:</strong> Python, Scikit-learn, Streamlit, Pandas, NumPy, Matplotlib</p>
                     </div>
                 </div>
             </div> <!-- end column -->
