@@ -86,57 +86,70 @@
             transform: translateY(-2px);
         }
 
-        /* Project buttons container */
-        .project-buttons {
+        /* Fix for custom project links to work like other ones */
+        .folio-item__custom-links {
+            z-index: 2;
+            position: absolute;
+            bottom: 3.9rem;
+            left: 3rem;
             display: flex;
             gap: 1rem;
-            margin-top: 1rem;
+            opacity: 0;
+            visibility: hidden;
+            transform: translate3d(-100%, 0, 0);
+            transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
         }
 
-        /* Project button styling */
-        .project-button {
+        .folio-item:hover .folio-item__custom-links {
+            opacity: 1;
+            visibility: visible;
+            transform: translate3d(0, 0, 0);
+        }
+
+        .folio-item__custom-link {
             display: inline-block;
             font-family: "Gothic A1", sans-serif;
-            font-weight: 600;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.2rem;
+            font-weight: 400;
+            font-size: 1.2rem;
+            line-height: 2rem;
             color: #000000;
             background-color: #ffffff;
-            border: 0.2rem solid #ffffff;
-            padding: 0.8rem 1.6rem;
+            padding: .6rem 1.2rem;
             text-decoration: none;
             transition: all 0.3s ease;
-            min-width: 120px;
+            min-width: 100px;
             text-align: center;
         }
 
-        .project-button:hover {
-            background-color: #f9861a;
-            border-color: #f9861a;
-            color: #ffffff;
-        }
-
-        .project-button.github {
+        .folio-item__custom-link.github {
             background-color: #333;
-            border-color: #333;
             color: #ffffff;
         }
 
-        .project-button.github:hover {
-            background-color: #f9861a;
-            border-color: #f9861a;
-        }
-
-        .project-button.live-demo {
+        .folio-item__custom-link.live-demo {
             background-color: #4CAF50;
-            border-color: #4CAF50;
             color: #ffffff;
         }
 
-        .project-button.live-demo:hover {
-            background-color: #388E3C;
-            border-color: #388E3C;
+        .folio-item__custom-link:hover,
+        .folio-item__custom-link:focus {
+            background-color: #f9861a;
+            color: #ffffff;
+        }
+
+        .folio-item__custom-link::before {
+            display: block;
+            content: "";
+            height: 1px;
+            width: 3rem;
+            background-color: rgba(255, 255, 255, 0.3);
+            position: absolute;
+            top: 50%;
+            left: -3rem;
+        }
+
+        .folio-item__custom-link:first-child::before {
+            display: none;
         }
 
         /* Blue About Me section */
@@ -181,12 +194,12 @@
                 font-size: 1.2rem;
             }
             
-            .project-buttons {
+            .folio-item__custom-links {
                 flex-direction: column;
                 gap: 0.5rem;
             }
             
-            .project-button {
+            .folio-item__custom-link {
                 width: 100%;
             }
         }
@@ -467,9 +480,9 @@
                         <div class="folio-item__cat">AI Health Predictor</div>
                         <h4 class="folio-item__title">Machine Learning Web Application</h4>
                     </div>
-                    <div class="project-buttons">
-                        <a href="https://github.com/MuziSitsha/ai-health-predictor" title="View Code" class="project-button github" target="_blank">GitHub</a>
-                        <a href="https://ai-health-predictor-kaknzejwgvtneyqpxzsm5b.streamlit.app/" title="Live Demo" class="project-button live-demo" target="_blank">Live Demo</a>
+                    <div class="folio-item__custom-links">
+                        <a href="https://github.com/MuziSitsha/ai-health-predictor" title="View Code" class="folio-item__custom-link github" target="_blank">GitHub</a>
+                        <a href="https://ai-health-predictor-kaknzejwgvtneyqpxzsm5b.streamlit.app/" title="Live Demo" class="folio-item__custom-link live-demo" target="_blank">Live Demo</a>
                     </div>
                     <div class="folio-item__caption">
                         <p>A machine learning web application that predicts potential health risks using patient data. Built with Random Forest Classifier, Scikit-learn, and deployed with Streamlit.</p>
@@ -491,9 +504,9 @@
                         <div class="folio-item__cat">Cerat Engineering Website</div>
                         <h4 class="folio-item__title">Modern Engineering Company Website</h4>
                     </div>
-                    <div class="project-buttons">
-                        <a href="https://github.com/MuziSitsha/cerat-engineering-website" title="View Code" class="project-button github" target="_blank">GitHub</a>
-                        <a href="https://cerat-engineering-website-u7op.vercel.app/" title="Live Website" class="project-button live-demo" target="_blank">Live Website</a>
+                    <div class="folio-item__custom-links">
+                        <a href="https://github.com/MuziSitsha/cerat-engineering-website" title="View Code" class="folio-item__custom-link github" target="_blank">GitHub</a>
+                        <a href="https://cerat-engineering-website-u7op.vercel.app/" title="Live Website" class="folio-item__custom-link live-demo" target="_blank">Live Website</a>
                     </div>
                     <div class="folio-item__caption">
                         <p>A modern, responsive website for an engineering company built with Next.js, TypeScript, and Tailwind CSS. Features include gallery, services, and contact forms.</p>
