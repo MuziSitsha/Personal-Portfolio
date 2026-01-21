@@ -3514,7 +3514,233 @@ html.no-csstransitions .hero-content {
     display: inline-block;
     margin-right: 10px;
 }
+/* ===================================================================
+ * # AI/ML Portfolio Custom Styles
+ *
+ * ------------------------------------------------------------------- */
 
+/* AI/ML Title styling */
+.ai-ml-title {
+    color: #4CAF50;
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+    display: inline-block;
+}
+
+/* Hero subtitle */
+.hero-subtitle {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Skills section */
+.skills-list {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.skills-list h4 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.skill-tag {
+    background: #4CAF50;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: #388E3C;
+    transform: translateY(-2px);
+}
+
+/* Additional project link spacing */
+.folio-item__project-link + .folio-item__project-link {
+    margin-left: 1rem;
+}
+
+/* Technology badges in project captions */
+.folio-item__caption strong {
+    color: #4CAF50;
+    font-weight: 600;
+}
+
+.folio-item__caption p + p {
+    margin-top: 1rem;
+}
+
+/* LinkedIn icon styling */
+.fa-linkedin, .fa-linkedin-in {
+    color: #0077B5;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+    .ai-ml-title {
+        font-size: 1.6rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .ai-ml-title {
+        font-size: 1.4rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .skills-list h4 {
+        font-size: 1.6rem;
+    }
+    
+    .skill-tags {
+        gap: 0.6rem;
+    }
+    
+    .skill-tag {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .ai-ml-title {
+        font-size: 1.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .skills-list h4 {
+        font-size: 1.4rem;
+    }
+    
+    .skill-tags {
+        gap: 0.4rem;
+    }
+    
+    .skill-tag {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .ai-ml-title {
+        font-size: 1rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .skill-tags {
+        justify-content: center;
+    }
+}
+
+/* Fix for hero section spacing */
+.s-hero .hero-content h1 {
+    margin-bottom: 1rem;
+}
+
+/* Improve About section spacing */
+.s-about .section-intro__content {
+    margin-bottom: 2rem;
+}
+
+.s-about .section-intro__content p {
+    margin-bottom: 1.5rem;
+}
+
+.s-about .section-intro__content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Fix project image display */
+.folio-item__thumb img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Ensure external images display properly */
+.folio-item__thumb a[href*="raw.githubusercontent.com"] img {
+    object-fit: cover;
+    min-height: 200px;
+}
+
+/* Add smooth transitions */
+.ai-ml-title, .skill-tag, .hero-subtitle {
+    transition: all 0.3s ease;
+}
+
+/* Dark mode adjustments for skills */
+.h-dark-bg .skill-tags .skill-tag {
+    background: rgba(76, 175, 80, 0.9);
+}
+
+.h-dark-bg .skill-tags .skill-tag:hover {
+    background: rgba(56, 142, 60, 0.9);
+}
+
+/* Portfolio section improvements */
+.s-portfolio .folio-item__caption {
+    padding-top: 1rem;
+}
+
+.s-portfolio .folio-item__caption p {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer improvements */
+.s-footer .footer-contact-block__list a:hover {
+    color: #4CAF50 !important;
+}
+
+/* Button hover effects for AI theme */
+.btn.btn--primary:hover,
+.btn.btn--primary:focus {
+    background-color: #4CAF50 !important;
+    border-color: #4CAF50 !important;
+}
+
+/* Service list items hover effect */
+.services-list__item-header:hover h5 {
+    color: #4CAF50;
+}
+
+.services-list__item-header:hover::after {
+    border-bottom-color: #4CAF50;
+    border-right-color: #4CAF50;
+}
 /* LinkedIn icon color */
 .fa-linkedin, .fa-linkedin-in {
     color: #0077B5;
