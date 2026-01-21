@@ -3745,3 +3745,159 @@ html.no-csstransitions .hero-content {
 .fa-linkedin, .fa-linkedin-in {
     color: #0077B5;
 }
+/* ===================================================================
+ * # AI/ML Portfolio Custom Styles
+ *
+ * ------------------------------------------------------------------- */
+
+/* AI/ML Title styling */
+.ai-ml-title {
+    color: #4CAF50;
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+    display: inline-block;
+}
+
+/* Hero subtitle */
+.hero-subtitle {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Skills section */
+.skills-list {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.skills-list h4 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.skill-tag {
+    background: #4CAF50;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: #388E3C;
+    transform: translateY(-2px);
+}
+
+/* Additional project link spacing */
+.folio-item__project-link + .folio-item__project-link {
+    margin-left: 1rem;
+}
+
+/* Make About Me section blue */
+.s-about {
+    background-color: #1d1b37 !important;
+    color: #ffffff !important;
+}
+
+.s-about h1,
+.s-about h3,
+.s-about h4,
+.s-about .lead,
+.s-about p {
+    color: #ffffff !important;
+}
+
+.s-about .section-intro__content p.lead,
+.s-about .section-intro__content p {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.s-about .skill-tag {
+    background: rgba(76, 175, 80, 0.9);
+}
+
+.s-about .skill-tag:hover {
+    background: rgba(56, 142, 60, 0.9);
+}
+
+/* Ensure project images display properly */
+.folio-item__thumb img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+    .ai-ml-title {
+        font-size: 1.6rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .ai-ml-title {
+        font-size: 1.4rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .folio-item__project-link + .folio-item__project-link {
+        display: block;
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .ai-ml-title {
+        font-size: 1.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .skill-tags {
+        justify-content: center;
+    }
+}
+
+/* Fix for hero section spacing */
+.s-hero .hero-content h1 {
+    margin-bottom: 1rem;
+}
+
+/* Improve About section spacing */
+.s-about .section-intro__content {
+    margin-bottom: 2rem;
+}
+
+.s-about .section-intro__content p {
+    margin-bottom: 1.5rem;
+}
+
+.s-about .section-intro__content p:last-child {
+    margin-bottom: 0;
+}
