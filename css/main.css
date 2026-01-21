@@ -3481,3 +3481,41 @@ html.no-csstransitions .hero-content {
   }
 
 }
+
+/* AI/ML Title styling */
+.ai-ml-title {
+    color: #4CAF50;
+    font-size: 1.4rem;
+    font-weight: 300;
+    display: block;
+    margin-top: 0.5rem;
+    letter-spacing: 1px;
+}
+
+/* Skill badges for project technologies */
+.tech-badges {
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-badge {
+    background: #4CAF50;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Improve project links */
+.folio-item__project-link {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* LinkedIn icon color */
+.fa-linkedin, .fa-linkedin-in {
+    color: #0077B5;
+}
